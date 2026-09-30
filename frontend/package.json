@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
-    "postbuild": "node scripts/prepare-standalone.mjs",
+    "postbuild": "node -e \"if (!process.env.VERCEL) require('child_process').execFileSync(process.execPath, ['scripts/prepare-standalone.mjs'], {stdio:'inherit'})\"",
     "start": "next start",
     "start:standalone": "node scripts/prepare-standalone.mjs && node .next/standalone/server.js",
     "check:assets": "node scripts/check_assets.mjs",
