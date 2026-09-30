@@ -20,7 +20,8 @@ const nextConfig: NextConfig = {
     // image would render broken).
     qualities: [75, 95],
   },
-  turbopack: {},
+  // turbopack is dev-only — do NOT enable it here, it prevents Vercel from
+  // generating next-server.js.nft.json and breaks the production deployment.
 };
 
 export default withPWA(nextConfig);
