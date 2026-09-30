@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "FloraNet BRICS Live Agricultural Dataset",
+  "description": "Real national crop statistics (World Bank WDI, CC-BY 4.0) and live NASA EONET natural-hazard events across the five BRICS nations, served by the FloraNet DPG node.",
+  "creator": {
+    "@type": "Organization",
+    "name": "FloraNet DPG Node"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "World Bank WDI cereal yield & fertilizer intensity by BRICS nation",
+      "value": "{\"source\":\"World Bank WDI v2 (CC-BY 4.0)\",\"indicators\":{\"cereal_yield_kg_ha\":\"AG.YLD.CREL.KG\",\"fertilizer_intensity\":\"AG.CON.FERT.PT.ZS\"},\"stats\":[{\"country\":\"Brazil\",\"iso3\":\"BRA\",\"cereal_yield_kg_ha\":{\"value\":5002.6,\"year\":\"2024\"},\"fertilizer_intensity\":{\"value\":718.3,\"year\":\"2023\"}},{\"country\":\"Russia\",\"iso3\":\"RUS\",\"cereal_yield_kg_ha\":{\"value\":3166.6,\"year\":\"2023\"},\"fertilizer_intensity\":{\"value\":13.5,\"year\":\"2023\"}},{\"country\":\"India\",\"iso3\":\"IND\",\"cereal_yield_kg_ha\":{\"value\":3632.5,\"year\":\"2024\"},\"fertilizer_intensity\":{\"value\":139.4,\"year\":\"2023\"}},{\"country\":\"China\",\"iso3\":\"CHN\",\"cereal_yield_kg_ha\":{\"value\":6418.1,\"year\":\"2023\"},\"fertilizer_intensity\":{\"value\":92,\"year\":\"2023\"}},{\"country\":\"South Africa\",\"iso3\":\"ZAF\",\"cereal_yield_kg_ha\":{\"value\":4562,\"year\":\"2024\"},\"fertilizer_intensity\":{\"value\":491.1,\"year\":\"2023\"}}]}"
+    }
+  ],
+  "about": [
+    {
+      "@type": "Event",
+      "name": "Super Typhoon Surigae",
+      "location": {
+        "@type": "Place",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 27.5,
+          "longitude": 132.8
+        }
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Tropical Cyclone 01B",
+      "location": {
+        "@type": "Place",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.1,
+          "longitude": 83.7
+        }
+      }
+    }
+  ],
+  "spatialCoverage": [
+    "India",
+    "Brazil",
+    "South Africa",
+    "Russia",
+    "China"
+  ],
+  "temporalCoverage": "2026-09-28T18:11:10.197Z"
+}

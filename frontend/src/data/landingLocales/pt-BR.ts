@@ -1,0 +1,66 @@
+import { LandingTranslation } from './types';
+
+export const ptBR: LandingTranslation =   {
+    nav: {
+      product: 'Produto',
+      solutions: 'Soluções',
+      resources: 'Recursos',
+      bricsImpact: 'Impacto BRICS',
+      pricing: 'Preços',
+      aboutUs: 'Sobre Nós',
+      joinPilot: 'Aderir ao Piloto',
+      getStarted: 'Começar Agora',
+    },
+    hero: {
+      badge: 'UM BEM PÚBLICO DIGITAL DE PADRÃO ABERTO',
+      titlePart1: 'Capacitando Produtores,',
+      titlePart2: 'Enriquecendo o Solo,',
+      titlePart3: 'Sustentando o Planeta.',
+      description: 'FloraNet é um sistema de inteligência agrícola com tecnologia de IA de código aberto que fornece diagnósticos de solo e previsões agrícolas em tempo real.',
+      ctaGetStarted: 'Começar com FloraNet',
+      ctaLiveDemo: 'Explorar Fazenda 3D ao Vivo',
+      trustedBy: 'PARCEIROS EM TODA A REDE BRICS',
+    },
+    stats: {
+      nodes: 'Centros de Pesquisa BRICS (Embrapa, ICAR, CAAS, ARC)',
+      corpora: 'Corpora RAG Agroecológicos Verificados',
+      water: 'Economia de Água com Automação de Válvulas LoRa',
+      resolution: 'Resolução Multiespectral (Sentinel-2)',
+    },
+    solutions: {
+      tag: 'ARQUITETURA AGRONÔMICA E ECOSSISTEMA',
+      title: 'Uma Plataforma. Todas as Soluções.',
+      subtitle: 'Inteligência agrícola de ponta a ponta para todos os elos da cadeia de valor alimentar.',
+      farmers: 'Para Produtores',
+      farmersDesc: 'Recomendações agronômicas personalizadas, alertas climáticos e monitoramento de talhões.',
+      agribusiness: 'Para o Agronegócio',
+      agribusinessDesc: 'Otimização de cadeias de suprimentos e previsão de safras com precisão.',
+      government: 'Para Governos',
+      governmentDesc: 'Políticas orientadas por dados, segurança alimentar e monitoramento de carbono.',
+      researchers: 'Para Pesquisadores',
+      researchersDesc: 'Acesso a dados anonimizados para impulsionar a inovação e sustentabilidade.',
+      learnMore: 'Saiba mais',
+    },
+    sandbox: {
+      tag: 'SANDBOX INTERATIVO AO VIVO',
+      title: 'Experimente a Inteligência FloraNet',
+      subtitle: 'Teste modelos de telemetria, radar de satélite e personas agronômicas diretamente no navegador.',
+    },
+    brics: {
+      tag: 'AGROECOLOGIA TRANSFRONTEIRIÇA',
+      title: 'Conectando Sistemas Agrícolas dos BRICS',
+      subtitle: 'FloraNet une produtores rurais e instituições científicas no Brasil, Rússia, Índia, China e África do Sul.',
+      viewCorridor: 'Explorar Corredor Regional',
+    },
+    faq: {
+      tag: 'PERGUNTAS FREQUENTES',
+      title: 'Perguntas Comuns sobre o FloraNet',
+      subtitle: 'Tudo o que você precisa saber sobre a plataforma, tecnologia e implementação regional.',
+    },
+    finalCta: {
+      title: 'Cultive o Futuro da Agricultura com FloraNet',
+      description: 'Junte-se a milhares de produtores e agrônomos que transformam o campo com dados abertos e inteligência artificial.',
+      ctaButton: 'Começar com FloraNet',
+      demoButton: 'Explorar Fazenda 3D ao Vivo',
+    },
+};

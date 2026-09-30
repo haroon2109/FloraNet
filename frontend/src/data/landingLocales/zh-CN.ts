@@ -1,0 +1,66 @@
+import { LandingTranslation } from './types';
+
+export const zhCN: LandingTranslation =   {
+    nav: {
+      product: '产品',
+      solutions: '解决方案',
+      resources: '资源中心',
+      bricsImpact: '金砖国家成果',
+      pricing: '定价',
+      aboutUs: '关于我们',
+      joinPilot: '加入试点',
+      getStarted: '立即开始',
+    },
+    hero: {
+      badge: '开放标准数字公共产品 (DPG)',
+      titlePart1: '赋能广大农户，',
+      titlePart2: '滋养健康土壤，',
+      titlePart3: '守护地球家园。',
+      description: 'FloraNet 是一个开源的人工智能农业决策系统，为全球农户和农业社区提供实时土壤诊断、气象预警和精准种植支持。',
+      ctaGetStarted: '开始使用 FloraNet',
+      ctaLiveDemo: '体验三维实景农场',
+      trustedBy: '金砖国家国家级科研机构支持',
+    },
+    stats: {
+      nodes: '金砖国家科研协作中心 (CAAS, ICAR, Embrapa, ARC)',
+      corpora: '权威农业生态 RAG 知识库',
+      water: 'LoRa 智能阀门精准节水',
+      resolution: 'Sentinel-2 多光谱高分辨率遥感',
+    },
+    solutions: {
+      tag: '农业智能化全域架构',
+      title: '一个平台，全链赋能。',
+      subtitle: '为全球粮食产业链中的每一个参与者提供端到端的农业智能支持。',
+      farmers: '面向农户',
+      farmersDesc: '个性化农事建议、精准气象预警和地块实时监测。',
+      agribusiness: '面向农业企业',
+      agribusinessDesc: '优化农产品供应链，精准预测作物产量。',
+      government: '面向政府机构',
+      governmentDesc: '数据驱动的农业政策制定与国家粮食安全保障。',
+      researchers: '面向科研学者',
+      researchersDesc: '安全共享科研数据，加速农业科技创新与育种突破。',
+      learnMore: '了解更多',
+    },
+    sandbox: {
+      tag: '交互式在线沙盒',
+      title: '体验 FloraNet 核心智能',
+      subtitle: '在浏览器中实时测试遥感雷达、数字孪生和农艺大模型。',
+    },
+    brics: {
+      tag: '跨国农业生态协作',
+      title: '连接金砖国家农业命脉',
+      subtitle: 'FloraNet 紧密联结中国、巴西、俄罗斯、印度和南非的农户与顶尖科研力量。',
+      viewCorridor: '查看区域走廊',
+    },
+    faq: {
+      tag: '常见问题解答',
+      title: '关于 FloraNet 的常见疑问',
+      subtitle: '全面了解系统技术架构、开源协议及区域试点部署。',
+    },
+    finalCta: {
+      title: '与 FloraNet 一起耕耘农业的未来',
+      description: '加入数百万农户与科研人员的行列，利用开放数据与人工智能革新全球农业。',
+      ctaButton: '开始使用 FloraNet',
+      demoButton: '体验三维实景农场',
+    },
+};

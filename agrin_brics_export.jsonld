@@ -1,0 +1,80 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "name": "BRICS Interoperability Agro-Index & Pest Risks",
+  "creator": {
+    "@type": "Organization",
+    "name": "FloraNet AgriN"
+  },
+  "dataset": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "BRICS Transboundary Pest Outbreaks",
+      "data": [
+        {
+          "id": "EONET_24787",
+          "pest_name": "Super Typhoon Surigae",
+          "latitude": 27.5,
+          "longitude": 132.8,
+          "severity": "critical",
+          "vector_direction": "Stationary",
+          "affected_crop": "Severe Storms",
+          "origin_country": "China"
+        },
+        {
+          "id": "EONET_24785",
+          "pest_name": "Tropical Cyclone 01B",
+          "latitude": 18.1,
+          "longitude": 83.7,
+          "severity": "high",
+          "vector_direction": "Stationary",
+          "affected_crop": "Severe Storms",
+          "origin_country": "India"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "BRICS Regional SOC Tracker",
+      "data": [
+        {
+          "region": "Brazil",
+          "country": "Brazil",
+          "adoption_percentage": 718.3,
+          "estimated_carbon_tons": 55642000,
+          "policy_status": "WDI fertilizer 2023 · arable 2023"
+        },
+        {
+          "region": "Russia",
+          "country": "Russia",
+          "adoption_percentage": 13.5,
+          "estimated_carbon_tons": 121649000,
+          "policy_status": "WDI fertilizer 2023 · arable 2023"
+        },
+        {
+          "region": "India",
+          "country": "India",
+          "adoption_percentage": 139.4,
+          "estimated_carbon_tons": 153868700,
+          "policy_status": "WDI fertilizer 2023 · arable 2023"
+        },
+        {
+          "region": "China",
+          "country": "China",
+          "adoption_percentage": 92,
+          "estimated_carbon_tons": 108427100,
+          "policy_status": "WDI fertilizer 2023 · arable 2023"
+        },
+        {
+          "region": "South Africa",
+          "country": "South Africa",
+          "adoption_percentage": 491.1,
+          "estimated_carbon_tons": 12000000,
+          "policy_status": "WDI fertilizer 2023 · arable 2023"
+        }
+      ]
+    }
+  ]
+}

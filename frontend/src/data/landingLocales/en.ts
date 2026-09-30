@@ -1,0 +1,66 @@
+import { LandingTranslation } from './types';
+
+export const en: LandingTranslation =   {
+    nav: {
+      product: 'Product',
+      solutions: 'Solutions',
+      resources: 'Resources',
+      bricsImpact: 'BRICS Impact',
+      pricing: 'Pricing',
+      aboutUs: 'About Us',
+      joinPilot: 'Join Pilot',
+      getStarted: 'Get Started',
+    },
+    hero: {
+      badge: 'AN OPEN-STANDARD DIGITAL PUBLIC GOOD',
+      titlePart1: 'Empowering Farmers,',
+      titlePart2: 'Enriching Soils,',
+      titlePart3: 'Sustaining Our Planet.',
+      description: 'FloraNet is an open-source, AI-powered agricultural intelligence system delivering real-time insights, soil diagnostics, and predictive farming tools to smallholder farmers and agricultural communities worldwide.',
+      ctaGetStarted: 'Get Started with FloraNet',
+      ctaLiveDemo: 'Explore Live 3D Farm',
+      trustedBy: 'TRUSTED BY PARTNERS ACROSS BRICS',
+    },
+    stats: {
+      nodes: 'BRICS Research Nodes (ICAR, Embrapa, CAAS, ARC)',
+      corpora: 'Verified Agro-Ecological RAG Corpora',
+      water: 'Water Conservation via LoRa Valve Automation',
+      resolution: 'Multispectral Spatial Resolution (Sentinel-2)',
+    },
+    solutions: {
+      tag: 'AGRONOMIC ARCHITECTURE & ECOSYSTEM',
+      title: 'One Platform. Every Solution.',
+      subtitle: 'End-to-end agricultural intelligence for every stakeholder in the global food value chain.',
+      farmers: 'For Farmers',
+      farmersDesc: 'Personalized crop advice, weather alerts, and field monitoring in real-time.',
+      agribusiness: 'For Agribusinesses',
+      agribusinessDesc: 'Optimize supply chains, forecast yields, and manage operations efficiently.',
+      government: 'For Governments',
+      governmentDesc: 'Make data-driven policies, improve food security, and track sustainability goals.',
+      researchers: 'For Researchers',
+      researchersDesc: 'Access anonymized data and insights to drive agricultural innovation.',
+      learnMore: 'Learn more',
+    },
+    sandbox: {
+      tag: 'INTERACTIVE LIVE SANDBOX',
+      title: 'Experience FloraNet Intelligence',
+      subtitle: 'Test the live telemetry models, satellite radar, and agronomy personas right in your browser.',
+    },
+    brics: {
+      tag: 'CROSS-BORDER AGROECOLOGY',
+      title: 'Connecting BRICS Agricultural Systems',
+      subtitle: 'FloraNet bridges smallholder farmers and scientific institutions across Brazil, Russia, India, China, and South Africa.',
+      viewCorridor: 'Explore Regional Corridor',
+    },
+    faq: {
+      tag: 'FREQUENTLY ASKED QUESTIONS',
+      title: 'Common Questions About FloraNet',
+      subtitle: 'Everything you need to know about the platform, technology, and regional implementation.',
+    },
+    finalCta: {
+      title: 'Cultivate the Future of Farming with FloraNet',
+      description: 'Join millions of farmers, researchers, and agronomists transforming global agriculture through open data and artificial intelligence.',
+      ctaButton: 'Get Started with FloraNet',
+      demoButton: 'Explore Live 3D Farm',
+    },
+};

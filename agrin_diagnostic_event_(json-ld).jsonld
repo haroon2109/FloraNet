@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "agrin": "http://purl.org/agrin/schema/",
+    "fao": "http://aims.fao.org/aos/agrovoc/",
+    "schema": "http://schema.org/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  },
+  "@type": "agrin:DiagnosticEvent",
+  "schema:identifier": "EONET_24787",
+  "schema:dateCreated": "2026-09-28T18:12:06.731Z",
+  "agrin:detectedVector": {
+    "@type": "fao:Pest",
+    "schema:name": "Super Typhoon Surigae",
+    "agrin:commonName": "Severe Storms",
+    "agrin:severity": "critical"
+  },
+  "agrin:recommendedIntervention": {
+    "@type": "agrin:BioRemedy",
+    "schema:name": "Consult live advisory feed before acting",
+    "agrin:activeAgent": "No canned prescription — see /api/v1/farm/recommendations",
+    "agrin:sourceInstitute": "FloraNet live pipeline",
+    "agrin:countryCode": "China"
+  },
+  "schema:location": {
+    "@type": "schema:GeoCoordinates",
+    "geo:lat": 27.5,
+    "geo:long": 132.8
+  },
+  "agrin:telemetryContext": {
+    "@type": "agrin:TelemetryData",
+    "agrin:note": "Pair with live GET /api/v1/soil/live and /api/v1/farm/weather-telemetry for the same coordinates"
+  }
+}

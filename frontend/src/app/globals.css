@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #10231A;
+  
+  /* Landing Page Colors */
+  --flora-dark-green: #123B2A;
+  --flora-primary-green: #2E8B57;
+  --flora-secondary-green: #4F9F62;
+  --flora-light-green: #EAF5EC;
+  --flora-very-light-green: #F5FAF5;
+  --flora-text-secondary: #52645A;
+  --flora-border: #E5ECE6;
+
+  /* Login Page Specific Colors */
+  --login-primary: #075C32;
+  --login-dark: #0D3023;
+  --login-secondary: #2F8F4E;
+  --login-light: #EAF5EC;
+  --login-vlight: #F5F9F5;
+  --login-text: #12251D;
+  --login-text-sec: #5A6961;
+  --login-border: #E0E8E2;
+  --login-bg: #F7FAF7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-flora-dark: var(--flora-dark-green);
+  --color-flora-primary: var(--flora-primary-green);
+  --color-flora-secondary: var(--flora-secondary-green);
+  --color-flora-light: var(--flora-light-green);
+  --color-flora-vlight: var(--flora-very-light-green);
+  --color-flora-text-sec: var(--flora-text-secondary);
+  --color-flora-border: var(--flora-border);
+
+  --color-login-primary: var(--login-primary);
+  --color-login-dark: var(--login-dark);
+  --color-login-secondary: var(--login-secondary);
+  --color-login-light: var(--login-light);
+  --color-login-vlight: var(--login-vlight);
+  --color-login-text: var(--login-text);
+  --color-login-text-sec: var(--login-text-sec);
+  --color-login-border: var(--login-border);
+  --color-login-bg: var(--login-bg);
+  
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Google Material 3 Accessible Focus Rings (WCAG 2.1 AA) */
+*:focus-visible {
+  outline: 2px solid #168A45 !important;
+  outline-offset: 2px !important;
+  border-radius: inherit;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5E2D8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A9C2B0;
+}
+
+@keyframes wave {
+  0% { transform: scaleY(0.2); opacity: 0.5; }
+  100% { transform: scaleY(1.2); opacity: 1; }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+ * Diagnostic Share Sheet print pipeline.
+ * When the farmer/extension officer hits "Print", ONLY the hidden A4
+ * prescription card prints — never the whole dashboard. html2pdf.js reads the
+ * same off-screen node for the PDF path, so both exports stay identical.
+ * ───────────────────────────────────────────────────────────────────────── */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #floranet-printable-share-sheet,
+  #floranet-printable-share-sheet * {
+    visibility: visible !important;
+  }
+
+  /* Pin the off-screen sheet into the printable flow at A4 size. */
+  #floranet-printable-share-sheet {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 210mm !important;
+    min-height: auto !important;
+    padding: 12mm !important;
+  }
+}

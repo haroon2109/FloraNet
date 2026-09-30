@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Local FAISS RAG persistence (regenerated from the corpus on boot)
+backend/app/services/.rag_index/
+
+# Locally downloaded open-source model artifacts (Whisper, sentence-transformers)
+backend/models/
+*.pt
+*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Environment / secrets
+.env
+.env.local
+.env*.local
+
+# OS / editor
+.DS_Store
+*.log
+
+# Anonymized transboundary pest-watch events (local, regenerated at runtime)
+backend/data/

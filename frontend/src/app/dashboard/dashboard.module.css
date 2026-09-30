@@ -1,0 +1,1026 @@
+/* FloraNet Dashboard CSS Module */
+/* Uses Vanilla CSS as requested */
+
+/* Variables matching the color system */
+.dashboardContainer {
+  --primary-dark-green: #075C32;
+  --primary-green: #168A45;
+  --light-green: #EAF5EC;
+  --very-light-green: #F4F9F5;
+  --background: #F7F9F7;
+  --card-bg: #FFFFFF;
+  --primary-text: #102A20;
+  --secondary-text: #52645D;
+  --border-color: #E1E7E3;
+  --positive: #188A45;
+  --warning: #F5A900;
+  --danger: #E84A3C;
+  --blue: #4EA7DF;
+  
+  --sidebar-width: 280px;
+  --right-rail-width: 320px;
+  
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-text);
+  overflow: hidden;
+}
+
+/* Base Styles */
+.dashboardContainer * {
+  box-sizing: border-box;
+}
+
+.dashboardContainer h1, 
+.dashboardContainer h2, 
+.dashboardContainer h3, 
+.dashboardContainer p {
+  margin: 0;
+}
+
+.dashboardContainer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboardContainer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboardContainer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.logoBrand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-dark-green);
+}
+
+.logoBrand svg {
+  color: var(--primary-green);
+}
+
+.collapseBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-text);
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #EFEFEF; /* Placeholder for illustration */
+  overflow: hidden;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profileFarm {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.navigation {
+  flex: 1;
+  overflow-y: auto;
+  margin: 0 -12px;
+  padding: 0 12px;
+}
+
+/* Hide scrollbar */
+.navigation::-webkit-scrollbar {
+  display: none;
+}
+.navigation {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--secondary-text);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: var(--very-light-green);
+}
+
+.navItem.active {
+  background-color: var(--light-green);
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.premiumCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  box-shadow: 0 2px 12px rgba(20, 60, 40, 0.04);
+}
+
+.premiumHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.crownIcon {
+  color: var(--warning);
+}
+
+.premiumDesc {
+  font-size: 12px;
+  color: var(--secondary-text);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.premiumBtn {
+  color: var(--primary-green);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.supportLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0 0;
+  margin-top: 20px;
+  border-top: 1px solid var(--border-color);
+  color: var(--secondary-text);
+  font-size: 13px;
+}
+
+.supportText {
+  display: flex;
+  flex-direction: column;
+}
+
+.supportAction {
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+/* Main Content Area */
+.mainWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Background and Animation */
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #d2f2fa 0%, #e8f9e6 40%, #c4ebd0 100%);
+}
+
+.heroContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* We would place the generated image as background-image here normally. */
+  /* For now, CSS-drawn scenery */
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  background-color: #FDE047;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #FDE047;
+}
+
+/* Mountains */
+.mountain {
+  position: absolute;
+  bottom: 100px;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 150px solid #8fc9a3;
+  opacity: 0.6;
+}
+.mountain1 { left: 10%; border-bottom-color: #6eb78c; }
+.mountain2 { left: 40%; border-bottom-color: #8fc9a3; border-bottom-width: 120px; }
+.mountain3 { right: -5%; border-bottom-color: #a4d3b4; border-bottom-width: 180px; }
+
+/* Fields */
+.fieldContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background: #a9d98e;
+  overflow: hidden;
+}
+
+.fieldRow {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #93cc76,
+    #93cc76 20px,
+    #82c262 20px,
+    #82c262 40px
+  );
+  transform: perspective(300px) rotateX(60deg);
+  transform-origin: bottom;
+  bottom: -20px;
+  left: -50%;
+}
+
+/* Clouds Animation */
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 20px;
+  opacity: 0.8;
+  animation: drift linear infinite;
+}
+.cloud1 { top: 30px; left: -100px; width: 100px; height: 30px; animation-duration: 120s; }
+.cloud2 { top: 60px; left: -150px; width: 120px; height: 35px; animation-duration: 180s; animation-delay: -40s; }
+.cloud3 { top: 40px; left: -80px; width: 80px; height: 25px; animation-duration: 90s; animation-delay: -20s; }
+
+/* Windmill Animation */
+.windmill {
+  position: absolute;
+  bottom: 110px;
+  right: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.windmillTower {
+  width: 6px;
+  height: 40px;
+  background: #5a7b64;
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+}
+.windmillBlades {
+  position: absolute;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  animation: spin 30s linear infinite;
+}
+.blade {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #476852;
+  transform-origin: top center;
+}
+.blade:nth-child(1) { transform: translate(-50%, 0) rotate(0deg); }
+.blade:nth-child(2) { transform: translate(-50%, 0) rotate(90deg); }
+.blade:nth-child(3) { transform: translate(-50%, 0) rotate(180deg); }
+.blade:nth-child(4) { transform: translate(-50%, 0) rotate(270deg); }
+
+@keyframes drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(120vw); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud, .windmillBlades {
+    animation: none;
+  }
+}
+
+.heroFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(247, 249, 247, 0) 0%, rgba(247, 249, 247, 1) 100%);
+  z-index: 2;
+}
+
+.scrollArea {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+}
+
+/* Left Column (Main) */
+.mainCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* Header */
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 4px;
+}
+
+.leafIcon {
+  color: var(--primary-green);
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dateSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+.actionBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text);
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--primary-green);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* KPI Grid */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(20, 60, 40, 0.04);
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(20, 60, 40, 0.06);
+}
+
+.kpiIconRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.kpiIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--light-green);
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specialized KPI Icons for specific metrics based on visual */
+.kpiCardWater .kpiIcon { background-color: #e6f3fb; color: var(--blue); }
+.kpiCardExpenses .kpiIcon { background-color: #f1f8eb; color: #5B9E3A; }
+
+.kpiTitle {
+  font-size: 12px;
+  color: var(--secondary-text);
+  font-weight: 500;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.kpiValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 8px;
+}
+
+.kpiValue small {
+  font-size: 14px;
+  color: var(--secondary-text);
+  font-weight: 500;
+}
+
+.kpiComparison {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.kpiComparison.up { color: var(--positive); }
+.kpiComparison.down { color: var(--positive); } /* Expenses/Water down is positive */
+.kpiComparison.neutral { color: var(--secondary-text); }
+
+/* Chart Row */
+.chartRow {
+  display: flex;
+  gap: 20px;
+}
+
+.trendCard {
+  flex: 2;
+}
+
+.distributionCard {
+  flex: 1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.cardDropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--secondary-text);
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.cardLink {
+  font-size: 13px;
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+.chartContainer {
+  height: 200px;
+  width: 100%;
+}
+
+/* Donut Legend */
+.donutLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dotHealthy { background-color: var(--primary-green); }
+.dotWatch { background-color: var(--warning); }
+.dotAttention { background-color: var(--danger); }
+
+.legendText {
+  font-size: 13px;
+  color: var(--primary-text);
+}
+.legendValue {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+/* Crop & Irrigation Row */
+.cropRow {
+  display: flex;
+  gap: 20px;
+}
+
+.cropCard {
+  flex: 1;
+}
+
+.cropList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cropItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  margin: -8px;
+}
+
+.cropItem:hover {
+  background-color: var(--very-light-green);
+}
+
+.cropIcon {
+  width: 36px;
+  height: 36px;
+  background-color: var(--very-light-green);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cropInfo {
+  width: 120px;
+}
+
+.cropName {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.cropField {
+  font-size: 11px;
+  color: var(--secondary-text);
+}
+
+.cropProgress {
+  flex: 1;
+  height: 6px;
+  background-color: #F0F2F1;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+}
+.progressFill.Healthy { background-color: var(--primary-green); }
+.progressFill.Watch { background-color: var(--warning); }
+
+.cropStatus {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.cropStatus.Healthy { background-color: var(--light-green); color: var(--primary-green); }
+.cropStatus.Watch { background-color: #FEF7E6; color: #D98C00; }
+
+
+/* Alerts */
+.alertsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.alertItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+}
+.alertItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.alertIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.alertIcon.warning { background-color: #FEF7E6; color: var(--warning); }
+.alertIcon.water { background-color: #e6f3fb; color: var(--blue); }
+.alertIcon.pest { background-color: var(--light-green); color: var(--primary-green); }
+
+.alertContent {
+  flex: 1;
+}
+
+.alertTitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--primary-text);
+}
+
+.alertDesc {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.alertTime {
+  font-size: 11px;
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Right Rail */
+.rightRail {
+  width: var(--right-rail-width);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+/* Weather Card */
+.weatherCard {
+  background-color: var(--primary-dark-green);
+  color: white;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.weatherHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.weatherLocation {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+}
+
+.weatherMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tempMain {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tempValue {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.tempDesc {
+  display: flex;
+  flex-direction: column;
+}
+.tempCondition {
+  font-size: 14px;
+  font-weight: 500;
+}
+.tempFeels {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.weatherMetrics {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.wMetric {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+.wMetricLabel {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+
+.forecastDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.forecastDayName {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.weatherLink {
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Recommendations */
+.recList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.recIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--light-green);
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recIcon.water {
+  background-color: #e6f3fb;
+  color: var(--blue);
+}
+
+.recContent {
+  flex: 1;
+}
+
+.recTitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.recDesc {
+  font-size: 11px;
+  color: var(--secondary-text);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.recBadge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+.recBadge.High { background-color: var(--light-green); color: var(--primary-green); border-color: transparent; }
+.recBadge.Recommended { background-color: #e6f3fb; color: var(--blue); border-color: transparent; }
+.recBadge.Preventive { background-color: var(--very-light-green); color: var(--primary-green); }
+
+/* Market Prices */
+.marketGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.marketItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.marketCommodity {
+  font-size: 12px;
+  color: var(--secondary-text);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.marketPrice {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.marketUnit {
+  font-size: 11px;
+  color: var(--secondary-text);
+  font-weight: normal;
+}
+
+.marketTrend {
+  font-size: 11px;
+  color: var(--positive);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.marketMiniChart {
+  height: 20px;
+  width: 100%;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+  .rightRail {
+    display: none; /* In a real app, we'd move this below the main content */
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .kpiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .chartRow, .cropRow {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pageTitle {
+    font-size: 24px;
+  }
+  .scrollArea {
+    padding: 16px;
+  }
+}
