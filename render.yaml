@@ -4,8 +4,8 @@ services:
     runtime: docker
     # Path to the Dockerfile, relative to the repo root
     dockerfilePath: ./backend/Dockerfile
-    # Docker build context — must be backend/ so COPY requirements.txt works
-    dockerContext: ./backend
+    # Build context is repo root — Dockerfile uses backend/ prefixes for all COPY paths
+    dockerContext: .
     envVars:
       - key: OLLAMA_BASE_URL
         value: https://api.groq.com/openai/v1

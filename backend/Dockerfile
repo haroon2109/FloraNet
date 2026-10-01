@@ -1,5 +1,7 @@
-# FloraNet FastAPI Backend — Google Cloud Run Production Dockerfile
-FROM python:3.11-slim as builder
+# FloraNet FastAPI Backend
+# Build context: repo root (.)   Dockerfile path: backend/Dockerfile
+# Render setting: Dockerfile Path = backend/Dockerfile, Docker Build Context = . (repo root)
+FROM python:3.11-slim AS builder
 
 WORKDIR /app
 
@@ -8,10 +10,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+# Context is repo root, so prefix with backend/
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 
-# Final minimal runner stage
+# ── Final minimal runner ──────────────────────────────────────────────────────
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -22,7 +25,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /root/.local /root/.local
-COPY . /app
+# Copy only the backend app code, not the whole monorepo
+COPY backend/app ./app
+COPY backend/data ./data
 
 ENV PATH=/root/.local/bin:$PATH
 ENV PYTHONUNBUFFERED=1
