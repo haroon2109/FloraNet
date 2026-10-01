@@ -9,6 +9,7 @@ requests
 httpx
 faiss-cpu
 numpy
+Pillow
 
 # Local open-source inference stack (no API keys, offline-capable)
 openai                      # OpenAI-compatible client -> points at Ollama /v1
