@@ -27,7 +27,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --from=builder /root/.local /root/.local
 # Copy only the backend app code, not the whole monorepo
 COPY backend/app ./app
-COPY backend/data ./data
+# data/ contains only runtime-generated files (e.g. pest_watch.sqlite3) — not in git.
+# Create the directory so the app can write to it on first run.
+RUN mkdir -p ./data
 
 ENV PATH=/root/.local/bin:$PATH
 ENV PYTHONUNBUFFERED=1
