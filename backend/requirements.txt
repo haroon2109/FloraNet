@@ -12,8 +12,8 @@ numpy
 
 # Local open-source inference stack (no API keys, offline-capable)
 openai                      # OpenAI-compatible client -> points at Ollama /v1
-sentence-transformers       # local multilingual embeddings (bge/MiniLM)
-faster-whisper              # local speech-to-text (MIT, runs on CPU)
+# sentence-transformers       # Disabled to save RAM (Render OOM) — falls back to Ollama endpoint
+# faster-whisper              # Disabled to save RAM (Render OOM) — disables audio parsing
 
 # Persistence / optional integrations (pending SQLite migration)
 supabase
